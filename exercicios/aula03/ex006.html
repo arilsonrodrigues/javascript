@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+                /*        ESTILO CSS   / Criando minha DIV          */
+                font: normal 15pt Arial;  
+                background-color: rgb(42, 133, 42); 
+                color: white;
+                width: 200px; /*Largura*/
+                height: 200px; /*Altura*/
+                line-height: 200px; /*Mesma Altura*/
+                text-align: center; /*Interaja no centro*/
+        }
+    </style>
+</head>
+<body> 
+    <div id="area">
+        interaja...
+       
+    </div>
+    
+    <script>
+        
+        a = document.querySelector('div#area')/*quando eu crio esse objeto 
+        do lado de fora, ele serve para todas as FUNCTIONs(função) */
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+        function clicar() {
+            a.innerText = 'clicou'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.innerText = 'entrou'
+        }
+
+        function sair() {
+            a.innerText = 'saiu'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(69, 69, 209);
+            color: white;
+            font: normal 10pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>  
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div class="msg"> Clique em mim</div>
+    <script>
+        /*p1 = document.getElementsByTagName('p')[1] //caso for TAG
+        document.write('Escrito: ' +p1.innerText)
+        p1.style.color = 'yellow'
+        p1.style.background = 'black'*/
+
+        /*d = document.getElementsByName('msg')[0] //caso for NOME
+        d.style.color = 'yellow'
+        d.style.background = 'black'*/
+
+        /*d = document.querySelector('div#msg') //caso for ID uso o #
+        d.innerText = 'Estou aguardando...'
+        d.style.color = 'yellow'
+        d.style.background = 'black'*/ 
+
+        d = document.querySelector('div.msg') //caso for CLASS uso o .
+        d.innerText = 'Estou aguardando... '
+    </script>
+</body>
+</html>

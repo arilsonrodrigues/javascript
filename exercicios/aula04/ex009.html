@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Que país vc mora?</h1>
+    <p> Digite seu País: <input type="text" name="txtnac" id="txtnac"></p>
+    <p> Digite seu nome: <input type="text" name="txtn" id="txtn"></p>
+    <input type="button" value="verificar" onclick="info()">
+    <div id="res">
+
+    </div>
+    <script>
+        function info() {
+            nac = document.querySelector('input#txtnac')
+            res = document.querySelector('div#res')
+            p = nac.value.toLowerCase()
+            mostrar = nac.value
+            n = document.querySelector('input#txtn')
+            outn = n.value
+            res.innerHTML = `Olá ${outn}, você é do país: ${mostrar}`
+            if (p == 'brasil') {
+                res.innerHTML += `<p>Você é brasileiro!!!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro!!!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

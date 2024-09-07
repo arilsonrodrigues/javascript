@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Você pode votar?</h1>
+    <p>Seu nome: <input type="text" name="txtn" id="txtn"></p>
+    <p>Sua idade: <input type="number" name="txtn1" id="txtn1"></p>
+    <input type="button" value="verificar" onclick="info()">
+    <div id="res">
+
+    </div>
+    <script>
+        function info() {
+        txtn1 = document.querySelector('input#txtn1')
+        res = document.querySelector('div#res')
+        n1 = Number(txtn1.value)
+        txtn = document.querySelector('input#txtn')
+        nome = txtn.value
+        res.innerHTML = `<p>Olá ${nome}, você tem ${n1} anos</p>`
+        if (n1 >= 18 && n1 <= 65) {
+            res.innerHTML += `<p>Voto Obrigatório</p>`
+        } else if (n1 < 16) {
+            res.innerHTML += `<p>Vc não vota!!!</p>`
+        } else {
+            res.innerHTML += `<p>Voto opcional</p>`
+        }
+    }
+    </script>
+</body>
+</html>

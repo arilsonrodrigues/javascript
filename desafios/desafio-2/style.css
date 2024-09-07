@@ -1,0 +1,39 @@
+body{
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+    color: darkslategray;
+}
+
+section{
+    background-color: white;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+div#res{
+    font-weight: bolder;
+}
+
+div#foto{
+    text-align: center;
+    padding-top: 10px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+footer{
+    text-align: center;
+    font-style: italic;
+}

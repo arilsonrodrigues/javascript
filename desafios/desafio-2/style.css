@@ -22,15 +22,12 @@ div#res{
     font-weight: bolder;
 }
 
-div#foto{
-    text-align: center;
-    padding-top: 10px;
-}
-
 img{
-    width: 200px;
-    height: 200px;
+    width: 100px; 
+    height: 100px; 
     border-radius: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 footer{

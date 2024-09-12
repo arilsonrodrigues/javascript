@@ -1,23 +1,23 @@
 function info(){
-     ini = document.getElementById('txti')
-     fim = document.getElementById('txtf')
-     pas = document.getElementById('txtp')
-     res = document.getElementById('res')
-    if (ini.value == 0 || fim.value == 0 || pas.value == 0){
-        alert('[ERRO] preencha os dados')
+   txti = document.getElementById('txti')
+   txtf = document.getElementById('txtf')
+   txts = document.getElementById('txts')
+   res = document.getElementById('res')
+   if(txti.value == 0 || txtf.value == 0 || txts.value == 0){
+    alert('[ERRO] digite novamnete')
+   }else{
+    res.innerHTML = `<p>Contagem:</p>`
+    i = Number(txti.value)
+    f = Number(txtf.value)
+    s = Number(txts.value)
+    if(i<f){
+        for(c = i; i<=f; i+=s){
+            res.innerHTML += `\ ${i}`
+        }
     }else{
-        res.innerHTML = `Contagem:`
-          ini = Number(txti.value)
-          fim = Number(txtf.value)
-          pas = Number(txtp.value)
-          if(ini < fim){
-            for(c=ini; c<=fim; c+=pas){
-            res.innerHTML += `\ ${c}`
-          }
-        }else{
-            for(c=ini; c>=fim; c-=pas){
-                res.innerHTML += `\ ${c}`
-            }
+        for(c = i; i>=f; i-=s){
+            res.innerHTML += `\ ${i}`
         }
     }
+   }
 }

@@ -76,11 +76,22 @@
         let spans = document.querySelectorAll('.span-required');
         let emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
+        form.addEventListener('submit', evento => {
+            evento.preventDefault();
             nome();
             email();
             senha();
+
+            let formData = new FormData(form);
+            let data = Object.fromEntries(formData);
+
+            fetch('https://reqres.in/api/users',{
+                method: 'POST',
+                headers: {
+                    'Content.type' : 'aplication/json'
+                },
+                body: JSON.stringify(data)
+            }).then(res => res.json()).then(data => console.log(data))
         });
 
         function setError(index){
